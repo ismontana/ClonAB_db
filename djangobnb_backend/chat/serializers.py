@@ -18,7 +18,7 @@ class ConversationDetailSerializer(serializers.ModelSerializer):
 
 class ConversationMessageSerializer(serializers.ModelSerializer):
     sent_to = UserDetailSerializer(many=False, read_only=True)
-    created_by = UserDetailSerializer(many=False, read_only=True)  # Cambiado a many=False
+    created_by = UserDetailSerializer(many=False, read_only=True)
 
     class Meta:
         model = ConversationMessage
